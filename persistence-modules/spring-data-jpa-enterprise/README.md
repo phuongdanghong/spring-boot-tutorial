@@ -4,14 +4,12 @@ This module contains articles about Spring Data JPA used in enterprise applicati
 
 ### Relevant Articles: 
 
-- [Spring JPA – Multiple Databases](https://www.baeldung.com/spring-data-jpa-multiple-databases)
 - [Spring Data Java 8 Support](https://www.baeldung.com/spring-data-java-8)
-- [Pagination and Sorting using Spring Data JPA](https://www.baeldung.com/spring-data-jpa-pagination-sorting)
 - [DB Integration Tests with Spring Boot and Testcontainers](https://www.baeldung.com/spring-boot-testcontainers-integration-test)
 - [A Guide to Spring’s Open Session In View](https://www.baeldung.com/spring-open-session-in-view)
 - [Working with Lazy Element Collections in JPA](https://www.baeldung.com/java-jpa-lazy-collections)
 - [Custom Naming Convention with Spring Data JPA](https://www.baeldung.com/spring-data-jpa-custom-naming)
-- [Partial Data Update with Spring Data](https://www.baeldung.com/spring-data-partial-update)
+- [Partial Data Update With Spring Data](https://www.baeldung.com/spring-data-partial-update)
 - [Spring Data JPA @Modifying Annotation](https://www.baeldung.com/spring-data-jpa-modifying-annotation)
 
 ### Eclipse Config 

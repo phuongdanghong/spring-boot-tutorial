@@ -4,7 +4,6 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>core-java-lang-2</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
     <name>core-java-lang-2</name>
     <packaging>jar</packaging>
 
@@ -19,11 +18,6 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang3.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-beanutils</groupId>
@@ -45,12 +39,6 @@
             <artifactId>jmh-core</artifactId>
             <version>${jmh-core.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${assertj.version}</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -64,9 +52,7 @@
     </build>
 
     <properties>
-        <assertj.version>3.12.2</assertj.version>
         <commons.beanutils.version>1.9.4</commons.beanutils.version>
-        <guava.version>29.0-jre</guava.version>
     </properties>
 
 </project>

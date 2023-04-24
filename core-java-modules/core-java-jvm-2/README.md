@@ -12,4 +12,6 @@ This module contains articles about working with the Java Virtual Machine (JVM).
 - [Memory Address of Objects in Java](https://www.baeldung.com/java-object-memory-address)
 - [List All Classes Loaded in a Specific Class Loader](https://www.baeldung.com/java-list-classes-class-loader)
 - [An Introduction to the Constant Pool in the JVM](https://www.baeldung.com/jvm-constant-pool)
-- More articles: [[<-- prev]](/core-java-modules/core-java-jvm)
+- [List All the Classes Loaded in the JVM](https://www.baeldung.com/jvm-list-all-classes-loaded)
+- [Static Fields and Garbage Collection](https://www.baeldung.com/java-static-fields-gc)
+- More articles: [[<-- prev]](/core-java-modules/core-java-jvm) [[next -->]](/core-java-modules/core-java-jvm-3)

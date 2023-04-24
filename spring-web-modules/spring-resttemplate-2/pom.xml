@@ -12,7 +12,7 @@
         <groupId>com.baeldung</groupId>
         <artifactId>parent-boot-2</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../../parent-boot-2/pom.xml</relativePath>
+        <relativePath>../../parent-boot-2</relativePath>
     </parent>
 
     <dependencies>
@@ -65,14 +65,5 @@
             <artifactId>logback-classic</artifactId>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

@@ -9,61 +9,61 @@ import org.hibernate.Transaction;
 
 import com.baeldung.hibernate.oneToMany.config.HibernateAnnotationUtil;
 import com.baeldung.hibernate.oneToMany.model.Cart;
-import com.baeldung.hibernate.oneToMany.model.Items;
-import com.baeldung.hibernate.oneToMany.model.ItemsOIO;
+import com.baeldung.hibernate.oneToMany.model.Item;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class HibernateManyisOwningSide {
+public class HibernateManyIsOwningSide {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(HibernateManyIsOwningSide.class);
+
     public static void main(String[] args) {
 
         Cart cart = new Cart();
         Cart cart2 = new Cart();
 
-        Items item1 = new Items(cart);
-        Items item2 = new Items(cart2);
-        Set<Items> itemsSet = new HashSet<Items>();
+        Item item1 = new Item(cart);
+        Item item2 = new Item(cart2);
+
+        Set<Item> itemsSet = new HashSet<>();
         itemsSet.add(item1);
         itemsSet.add(item2);
-
         cart.setItems(itemsSet);
 
-        
-        
-        SessionFactory sessionFactory = null;
-        Session session = null;
-        Transaction tx = null;
+        // Get Session
+        SessionFactory sessionFactory = HibernateAnnotationUtil.getSessionFactory();
+        Session session = sessionFactory.getCurrentSession();
+
         try {
-            // Get Session
-            sessionFactory = HibernateAnnotationUtil.getSessionFactory();
-            session = sessionFactory.getCurrentSession();
-            System.out.println("Session created");
+            LOGGER.info("Session created");
+
             // start transaction
-            tx = session.beginTransaction();
+            Transaction tx = session.beginTransaction();
+
             // Save the Model object
             session.save(cart);
             session.save(cart2);
             session.save(item1);
             session.save(item2);
+
             // Commit transaction
             tx.commit();
+
             session = sessionFactory.getCurrentSession();
             tx = session.beginTransaction();
 
-            item1 = (Items) session.get(Items.class, new Long(1));
-            item2 = (Items) session.get(Items.class, new Long(2));
+            item1 = session.get(Item.class, 1L);
+            item2 = session.get(Item.class, 2L);
             tx.commit();
-            
-         
-            System.out.println("item1 ID=" + item1.getId() + ", Foreign Key CartOIO ID=" + item1.getCart()
-                .getId());
-            System.out.println("item2 ID=" + item2.getId() + ", Foreign Key CartOIO ID=" + item2.getCart()
-                .getId());
+
+            LOGGER.info("item1 ID={}, Foreign Key CartOIO ID={}", item1.getId(), item1.getCart().getId());
+            LOGGER.info("item2 ID={}, Foreign Key CartOIO ID={}", item2.getId(), item2.getCart().getId());
 
         } catch (Exception e) {
-            System.out.println("Exception occured. " + e.getMessage());
-            e.printStackTrace();
+            LOGGER.error("Exception occurred", e);
         } finally {
             if (!sessionFactory.isClosed()) {
-                System.out.println("Closing SessionFactory");
+                LOGGER.info("Closing SessionFactory");
                 sessionFactory.close();
             }
         }

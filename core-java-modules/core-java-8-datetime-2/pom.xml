@@ -4,7 +4,6 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>core-java-8-datetime-2</artifactId>
-    <version>${project.parent.version}</version>
     <name>core-java-8-datetime-2</name>
     <packaging>jar</packaging>
 
@@ -24,12 +23,6 @@
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
             <version>${joda-time.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${assertj.version}</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
@@ -63,8 +56,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <joda-time.version>2.10</joda-time.version>
-        <!-- testing -->
-        <assertj.version>3.6.1</assertj.version>
     </properties>
 
 </project>

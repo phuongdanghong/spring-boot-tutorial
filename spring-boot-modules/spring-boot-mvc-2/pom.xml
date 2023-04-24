@@ -12,7 +12,6 @@
         <groupId>com.baeldung.spring-boot-modules</groupId>
         <artifactId>spring-boot-modules</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../</relativePath>
     </parent>
 
     <dependencies>
@@ -28,22 +27,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
-        </dependency>
-        <!-- Swagger dependencies for REST documentation -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${spring.fox.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${spring.fox.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-spring-webmvc</artifactId>
-            <version>${spring.fox.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -91,8 +74,7 @@
 
     <properties>
         <spring.fox.version>3.0.0</spring.fox.version>
-        <start-class>com.baeldung.swagger2boot.SpringBootSwaggerApplication</start-class>
-        <!-- <start-class>com.baeldung.springbootmvc.SpringBootMvcFnApplication</start-class> -->
+        <start-class>com.baeldung.springbootmvc.SpringBootMvcFnApplication</start-class>
         <xstream.version>1.4.11.1</xstream.version>
     </properties>
 
